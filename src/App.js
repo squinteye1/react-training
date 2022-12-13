@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import DataEntryField from './components/DataEntryField';
@@ -6,9 +6,8 @@ import DataEntryField from './components/DataEntryField';
 function App() {
   return (
     <>
-      <Header />
       <div className="App">
-        <DataEntryField title={"Price excl VAT:"} />
+        <Header />
         <DataEntryField title={"Price excl VAT:"} />
       </div>
     </>
