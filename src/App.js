@@ -17,6 +17,13 @@ function App() {
     console.log("handleExclPriceChange");
   }
 
+  const handleIncPriceChange = (price) => {
+    const totalLocalPrice = price / (vatRate / 100 + 1);
+    setTotalPrice(price);
+    setSalePrice(totalLocalPrice);
+    console.log("handleExclPriceChange");
+  };
+
   return (
     <>
       <div className="App">
@@ -29,7 +36,7 @@ function App() {
         <DataEntryField
           title={"Price inc VAT:"}
           value={totalPrice === 0.0 ? "" : totalPrice}
-          setValue={setTotalPrice}
+          setValue={handleIncPriceChange}
         />
       </div>
     </>
