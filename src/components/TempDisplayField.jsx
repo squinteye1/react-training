@@ -2,7 +2,7 @@ import React from 'react'
 
 const TempDisplayField = (props) => {
   return (
-    <div>{props.valueToDisplay}</div>
+    <h2>{props.valueToDisplay}</h2>
   )
 }
 
