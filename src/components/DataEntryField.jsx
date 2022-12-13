@@ -8,7 +8,7 @@ const DataEntryField = (props) => {
     <div>
       {props.title}
       <input
-        type="text"
+        type="number"
         id="lname"
         name="lname"
         value={props.value}
