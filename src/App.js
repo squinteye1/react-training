@@ -54,6 +54,7 @@ function App() {
           value={totalPrice === 0.0 ? "" : totalPrice}
           setValue={handleIncPriceChange}
         />
+        
       </div>
     </>
   );

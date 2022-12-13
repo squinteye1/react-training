@@ -13,7 +13,7 @@ const VATField = (props) => {
 
   return (
     <select 
-    value={currentVATRate}
+   // value={currentVATRate}
     onChange={(e) => {
       
       updateVATRate(+e.target.value);
