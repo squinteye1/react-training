@@ -4,13 +4,15 @@ import { useState } from 'react';
 import Header from './components/Header';
 import DataEntryField from './components/DataEntryField';
 import DisplayField from './components/DisplayField';
+import VATField from './components/VATField';
 
 function App() {
   const [salePrice, setSalePrice] = useState(0.0);
   const [totalPrice, setTotalPrice] = useState(0.0);
-  const [vatToPay, setVatToPay] = useState(20.0);
+  const [vatToPay, setVatToPay] = useState(0.0);
+  const [vatRate, updateVATRate] = useState(20.0)
 
-  const vatRate = 20.0;
+  //const vatRate = 20.0;
 
   const handleExclPriceChange = (price) => {
     const totalLocalPrice = price * ((vatRate / 100) + 1);
@@ -32,10 +34,15 @@ function App() {
     setVatToPay(priceWithVAT-priceWithoutVAT)
   }
 
+  const handleVATChangeRate = () => {
+    handleExclPriceChange(salePrice);
+  };
+
   return (
     <>
       <div className="App">
         <Header />
+        <VATField vatRateChanged={updateVATRate} currentVATRate={vatRate} updatePrices={ handleVATChangeRate} />
         <DataEntryField
           title={"Price excl VAT:"}
           value={salePrice === 0.0 ? "" : salePrice}
