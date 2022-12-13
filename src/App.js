@@ -5,20 +5,21 @@ import Header from './components/Header';
 import DataEntryField from './components/DataEntryField';
 
 function App() {
-  const [vatValue, setVatValue] = useState('');
+  const [exclValue, setexclValue] = useState('');
+  const [inclValue, inclValueValue] = useState('');
   return (
     <>
       <div className="App">
         <Header />
         <DataEntryField
           title={"Price excl VAT:"}
-          value={vatValue}
-          setValue={setVatValue}
+          value={exclValue}
+          setValue={setexclValue}
         />
         <DataEntryField
           title={"Price inc VAT:"}
-          value={vatValue}
-          setValue={setVatValue}
+          value={inclValue}
+          setValue={inclValueValue}
         />
       </div>
     </>
