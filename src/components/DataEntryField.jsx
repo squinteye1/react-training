@@ -13,9 +13,8 @@ const DataEntryField = (props) => {
         name="lname"
         value={props.value}
         onChange={(e) => props.setValue(+e.target.value)}
-        pattern="[0-9]*"
       />
-      <TempDisplayField valueToDisplay={props.value} />
+   
     </div>
   );
 }

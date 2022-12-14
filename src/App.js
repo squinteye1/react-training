@@ -9,11 +9,15 @@ import DisplayField from './components/DisplayField';
 import VATField from './components/VATField';
 import {Col, Row} from 'react-bootstrap';
 
+let count = 1;
+
 function App() {
   const [salePrice, setSalePrice] = useState(0.0);
   const [totalPrice, setTotalPrice] = useState(0.0);
   const [vatToPay, setVatToPay] = useState(0.0);
   const [vatRate, updateVATRate] = useState(20.0)
+
+  console.log(`App() called - ${count++}`)
 
   //const vatRate = 20.0;
 
@@ -21,7 +25,7 @@ function App() {
     const totalLocalPrice = price * ((vatRate / 100) + 1);
     setSalePrice(price);
     setTotalPrice(totalLocalPrice);
-    console.log("handleExclPriceChange");
+    //console.log("handleExclPriceChange");
     updateVatToPay(price, totalLocalPrice);
   }
 
@@ -41,6 +45,12 @@ function App() {
     handleExclPriceChange(salePrice);
   };
 
+  const changevatRate = (rate) => {
+    console.log('App::ChangeVatRate');
+             updateVATRate(rate);
+
+  }
+
   return (
     <Container className="p-3 bg-dark">
       <Container className="p-5 mb-4 bg-light rounded-3">
@@ -49,7 +59,7 @@ function App() {
         </Row>
         <Row className="p-1 mb-1 bg-light rounded-3">
           <VATField
-            vatRateChanged={updateVATRate}
+            vatRateChanged={changevatRate}
             currentVATRate={vatRate}
             updatePrices={handleVATChangeRate}
           />
