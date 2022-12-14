@@ -2,7 +2,7 @@
 import './App.css';
 import { Container } from 'react-bootstrap';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import DataEntryField from './components/DataEntryField';
 import DisplayField from './components/DisplayField';
@@ -17,7 +17,12 @@ function App() {
   const [vatToPay, setVatToPay] = useState(0.0);
   const [vatRate, updateVATRate] = useState(20.0)
 
-  console.log(`App() called - ${count++}`)
+  console.log(`App() called - ${count++}`);
+
+  useEffect(() => {
+    console.log("App::VATrate changed");
+    handleExclPriceChange(salePrice);
+  },[vatRate]);
 
   //const vatRate = 20.0;
 

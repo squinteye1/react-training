@@ -3,21 +3,21 @@ import React, { useEffect, useState } from "react";
 
 const VATField = (props) => {
 
-  const [vatRate, updateVATRate] = useState(20);
+  //const [vatRate, updateVATRate] = useState(20);
 
   const {updatePrices, currentVATRate} = props;
   console.log('VatField Called');
 
-  useEffect(() => {
+/*  useEffect(() => {
     console.log('VatField::vateRate changed')
     updatePrices();
-  },[vatRate, updatePrices]);
+  },[vatRate, updatePrices]); */
 
   return (
     <select
-      value={vatRate}
+      value={currentVATRate}
       onChange={(e) => {
-        updateVATRate(+e.target.value);
+        //updateVATRate(+e.target.value);
         props.vatRateChanged(+e.target.value);
       }}
     >
