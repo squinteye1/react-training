@@ -1,16 +1,15 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { SalesHeader } from "./SalesHeader";
-import salesDataHistory from "../data/sales.json";
+//import salesDataHistory from "../data/sales.json";
 import SaleItem from "./SaleItem.model";
 import Sale from "./Sale.jsx";
+import { useState } from "react";
+import Network from "../networking/Network";
 
-
-
-
-let index = 1;
 
 export const SalesHistory = (props) => {
-  const sales = salesDataHistory.map((currentSaleItem) => {
+  const [salesDataHistory, setSalesDataHistory] = useState({sales:[]});
+  const sales = salesDataHistory.sales.map((currentSaleItem) => {
     const newSaleItem = new SaleItem(
       currentSaleItem.salePrice,
       currentSaleItem.totalPrice,
@@ -22,7 +21,7 @@ export const SalesHistory = (props) => {
   });
   return (
     <>
-
+  <Network setDataStore={setSalesDataHistory} />
       <Container className="p-5 mb-4 bg-light rounded-3">
         <Row className="p-1 mb-1 bg-light rounded-3">
           <SalesHeader />
