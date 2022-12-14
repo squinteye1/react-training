@@ -59,7 +59,7 @@ function Calulator() {
  
       <Container className="p-5 mb-4 bg-light rounded-3">
         <Row className="p-1 mb-1 bg-light rounded-3">
-          <Header />
+      
         </Row>
         <Row className="p-1 mb-1 bg-light rounded-3">
           <VATField

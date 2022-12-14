@@ -11,9 +11,7 @@ const Sale = ({ saleItem }) => {
 
   const onClickHandler = (event) => {
     let tagName = event.target.tagName;
-    console.log(
-      tagName === "TD" ? "Table Data" : tagName === "A" ? "Hyperlink" : "N/A"
-    );
+
     if (tagName === "TD") toggleShowToast();
   };
 
