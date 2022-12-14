@@ -1,10 +1,13 @@
 //import logo from './logo.svg';
 import './App.css';
+import { Container } from 'react-bootstrap';
+
 import { useState } from 'react';
 import Header from './components/Header';
 import DataEntryField from './components/DataEntryField';
 import DisplayField from './components/DisplayField';
 import VATField from './components/VATField';
+import {Col, Row} from 'react-bootstrap';
 
 function App() {
   const [salePrice, setSalePrice] = useState(0.0);
@@ -39,24 +42,31 @@ function App() {
   };
 
   return (
-    <>
-      <div className="App">
-        <Header />
-        <VATField vatRateChanged={updateVATRate} currentVATRate={vatRate} updatePrices={ handleVATChangeRate} />
-        <DataEntryField
-          title={"Price excl VAT:"}
-          value={salePrice === 0.0 ? "" : salePrice}
-          setValue={handleExclPriceChange}
-        />
-        <DisplayField label={"VAT to Pay"} value={vatToPay} />
-        <DataEntryField
-          title={"Price inc VAT:"}
-          value={totalPrice === 0.0 ? "" : totalPrice}
-          setValue={handleIncPriceChange}
-        />
-        
-      </div>
-    </>
+    <Container className="p-3 bg-dark">
+      <Container className="p-5 mb-4 bg-light rounded-3">
+        <Row className="p-1 mb-1 bg-light rounded-3">
+          <Header />
+        </Row>
+        <Row className="p-1 mb-1 bg-light rounded-3">
+          <VATField
+            vatRateChanged={updateVATRate}
+            currentVATRate={vatRate}
+            updatePrices={handleVATChangeRate}
+          />
+          <DataEntryField
+            title={"Price excl VAT:"}
+            value={salePrice === 0.0 ? "" : salePrice}
+            setValue={handleExclPriceChange}
+          />
+          <DisplayField label={"VAT to Pay"} value={vatToPay} />
+          <DataEntryField
+            title={"Price inc VAT:"}
+            value={totalPrice === 0.0 ? "" : totalPrice}
+            setValue={handleIncPriceChange}
+          />
+        </Row>
+      </Container>
+    </Container>
   );
 }
 
