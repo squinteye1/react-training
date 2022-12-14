@@ -16,8 +16,9 @@ function App() {
    
 
       <Routes>
-        <Route path="/" element={<Calculator />} />
-        <Route path="/sales" element={<SalesHistory />} />
+      <Route path="/" element={<Calculator />} >
+          <Route path="sales" element={<SalesHistory />} />
+      </Route>
       </Routes>
     </Container>
   );

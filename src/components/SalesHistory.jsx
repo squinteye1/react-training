@@ -5,6 +5,8 @@ import SaleItem from "./SaleItem.model";
 import Sale from "./Sale.jsx";
 import Calulator from "./Calculator";
 
+
+
 let index = 1;
 
 export const SalesHistory = (props) => {
@@ -20,7 +22,7 @@ export const SalesHistory = (props) => {
   });
   return (
     <>
-      <Calulator />
+
       <Container className="p-5 mb-4 bg-light rounded-3">
         <Row className="p-1 mb-1 bg-light rounded-3">
           <SalesHeader />
@@ -39,6 +41,7 @@ export const SalesHistory = (props) => {
           </table>
         </Row>
       </Container>
+     
     </>
   );
 };

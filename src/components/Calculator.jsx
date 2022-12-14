@@ -7,7 +7,7 @@ import DataEntryField from "./DataEntryField";
 import DisplayField from "./DisplayField";
 import VATField from "./VATField";
 import { Col, Row } from "react-bootstrap";
-
+import { Outlet } from "react-router-dom";
 
 let count = 1;
 
@@ -56,11 +56,9 @@ function Calulator() {
   };
 
   return (
- 
+    <>
       <Container className="p-5 mb-4 bg-light rounded-3">
-        <Row className="p-1 mb-1 bg-light rounded-3">
-      
-        </Row>
+        <Row className="p-1 mb-1 bg-light rounded-3"></Row>
         <Row className="p-1 mb-1 bg-light rounded-3">
           <VATField
             vatRateChanged={changevatRate}
@@ -79,9 +77,9 @@ function Calulator() {
             setValue={handleIncPriceChange}
           />
         </Row>
-  
-
-    </Container>
+      </Container>
+      <Outlet />
+    </>
   );
 }
 
