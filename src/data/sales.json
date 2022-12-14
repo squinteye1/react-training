@@ -1,0 +1,142 @@
+[
+  {
+    "id": 0,
+    "salePrice": "95",
+    "totalPrice": "114.00",
+    "vatToPay": "19.00",
+    "vatRate": 20
+  },
+  {
+    "id": 1,
+    "salePrice": "78",
+    "totalPrice": "93.60",
+    "vatToPay": "15.60",
+    "vatRate": 20
+  },
+  {
+    "id": 2,
+    "salePrice": "74",
+    "totalPrice": "88.80",
+    "vatToPay": "14.80",
+    "vatRate": 20
+  },
+  {
+    "id": 3,
+    "salePrice": "62",
+    "totalPrice": "74.40",
+    "vatToPay": "12.40",
+    "vatRate": 20
+  },
+  {
+    "id": 4,
+    "salePrice": "80",
+    "totalPrice": "96.00",
+    "vatToPay": "16.00",
+    "vatRate": 20
+  },
+  {
+    "id": 5,
+    "salePrice": "64",
+    "totalPrice": "76.80",
+    "vatToPay": "12.80",
+    "vatRate": 20
+  },
+  {
+    "id": 6,
+    "salePrice": "67",
+    "totalPrice": "80.40",
+    "vatToPay": "13.40",
+    "vatRate": 20
+  },
+  {
+    "id": 7,
+    "salePrice": "97",
+    "totalPrice": "116.40",
+    "vatToPay": "19.40",
+    "vatRate": 20
+  },
+  {
+    "id": 8,
+    "salePrice": "89",
+    "totalPrice": "106.80",
+    "vatToPay": "17.80",
+    "vatRate": 20
+  },
+  {
+    "id": 9,
+    "salePrice": "64",
+    "totalPrice": "76.80",
+    "vatToPay": "12.80",
+    "vatRate": 20
+  },
+  {
+    "id": 10,
+    "salePrice": "142",
+    "totalPrice": "163.30",
+    "vatToPay": "21.30",
+    "vatRate": 15
+  },
+  {
+    "id": 11,
+    "salePrice": "100",
+    "totalPrice": "115.00",
+    "vatToPay": "15.00",
+    "vatRate": 15
+  },
+  {
+    "id": 12,
+    "salePrice": "137",
+    "totalPrice": "157.55",
+    "vatToPay": "20.55",
+    "vatRate": 15
+  },
+  {
+    "id": 13,
+    "salePrice": "130",
+    "totalPrice": "149.50",
+    "vatToPay": "19.50",
+    "vatRate": 15
+  },
+  {
+    "id": 14,
+    "salePrice": "109",
+    "totalPrice": "125.35",
+    "vatToPay": "16.35",
+    "vatRate": 15
+  },
+  {
+    "id": 15,
+    "salePrice": "118",
+    "totalPrice": "135.70",
+    "vatToPay": "17.70",
+    "vatRate": 15
+  },
+  {
+    "id": 16,
+    "salePrice": "100",
+    "totalPrice": "115.00",
+    "vatToPay": "15.00",
+    "vatRate": 15
+  },
+  {
+    "id": 17,
+    "salePrice": "139",
+    "totalPrice": "159.85",
+    "vatToPay": "20.85",
+    "vatRate": 15
+  },
+  {
+    "id": 18,
+    "salePrice": "130",
+    "totalPrice": "149.50",
+    "vatToPay": "19.50",
+    "vatRate": 15
+  },
+  {
+    "id": 19,
+    "salePrice": "125",
+    "totalPrice": "143.75",
+    "vatToPay": "18.75",
+    "vatRate": 15
+  }
+]

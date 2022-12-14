@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 
 const VATField = (props) => {
 
   //const [vatRate, updateVATRate] = useState(20);
 
-  const {updatePrices, currentVATRate} = props;
+  const { currentVATRate} = props;
   console.log('VatField Called');
 
 /*  useEffect(() => {
