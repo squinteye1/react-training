@@ -7,15 +7,27 @@ import DataEntryField from "./DataEntryField";
 import DisplayField from "./DisplayField";
 import VATField from "./VATField";
 import { Col, Row } from "react-bootstrap";
-import { Outlet } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 
 let count = 1;
 
+
+
 function Calulator() {
+const { paramSalePrice, paramVatRate } = useParams();
+
   const [salePrice, setSalePrice] = useState(0.0);
   const [totalPrice, setTotalPrice] = useState(0.0);
   const [vatToPay, setVatToPay] = useState(0.0);
   const [vatRate, updateVATRate] = useState(20.0);
+
+console.log(paramSalePrice, paramVatRate);
+  useEffect(() => {
+    if( paramSalePrice !== undefined){
+    setSalePrice(paramSalePrice);
+    updateVATRate(paramVatRate);
+    }
+  }, [paramSalePrice, paramVatRate]);
 
   console.log(`App() called - ${count++}`);
 

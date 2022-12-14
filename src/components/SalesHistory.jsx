@@ -3,7 +3,7 @@ import { SalesHeader } from "./SalesHeader";
 import salesDataHistory from "../data/sales.json";
 import SaleItem from "./SaleItem.model";
 import Sale from "./Sale.jsx";
-import Calulator from "./Calculator";
+
 
 
 

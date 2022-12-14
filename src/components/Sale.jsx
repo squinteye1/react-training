@@ -15,18 +15,19 @@ const Sale = ({ saleItem }) => {
     if (tagName === "TD") toggleShowToast();
   };
 
+  const slug = `/${saleItem.salePrice}/${saleItem.vatRate}`;
+
   return (
     <>
       <tr key={saleItem.id} onClick={onClickHandler}>
-       
         <td>
-          <Link to="/">{saleItem.salePrice}</Link>
+          <Link to={slug}>{saleItem.salePrice}</Link>
         </td>
         <td>
-          <Link to="/">{saleItem.totalPrice}</Link>
+          <Link to={slug}>{saleItem.totalPrice}</Link>
         </td>
         <td>
-          <Link to="/">{saleItem.vatToPay}</Link>
+          <Link to={slug}>{saleItem.vatToPay}</Link>
         </td>
         <td>{saleItem.vatRate}</td>
       </tr>
